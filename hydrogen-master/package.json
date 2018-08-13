@@ -1,0 +1,110 @@
+{
+  "name": "Hydrogen",
+  "main": "./lib/main",
+  "version": "2.5.0",
+  "description": "Run code interactively, inspect data, and plot. All the power of Jupyter kernels, inside your favorite text editor.",
+  "author": "nteract contributors",
+  "keywords": [
+    "execute",
+    "run",
+    "jupyter",
+    "ipython",
+    "julia",
+    "python",
+    "torch",
+    "ijulia",
+    "irkernel",
+    "itorch",
+    "plot",
+    "image"
+  ],
+  "activationCommands": {
+    "atom-text-editor": [
+      "hydrogen:start-local-kernel",
+      "hydrogen:connect-to-remote-kernel",
+      "hydrogen:run",
+      "hydrogen:run-and-move-down",
+      "hydrogen:run-all",
+      "hydrogen:run-all-above",
+      "hydrogen:run-cell",
+      "hydrogen:run-cell-and-move-down",
+      "hydrogen:restart-kernel-and-re-evaluate-bubbles",
+      "hydrogen:toggle-bubble"
+    ]
+  },
+  "scripts": {
+    "flow": "flow",
+    "prettier": "prettier --write 'lib/**/*.js' 'spec/**/*.js'",
+    "build:docs": "markdox lib/plugin-api/hydrogen-provider.js lib/plugin-api/hydrogen-kernel.js -o docs/PluginAPI.md",
+    "precommit": "lint-staged"
+  },
+  "atomTestRunner": "atom-jasmine3-test-runner",
+  "repository": "git@github.com:nteract/hydrogen.git",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.20.0 <2.0.0"
+  },
+  "lint-staged": {
+    "{lib,spec}/**/*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@jupyterlab/services": "^0.52.0",
+    "@nteract/commutable": "^3.0.4",
+    "@nteract/display-area": "^3.1.7",
+    "@nteract/transform-plotly": "^3.1.4",
+    "@nteract/transform-vega": "^3.1.1",
+    "@nteract/transforms": "^3.1.4",
+    "anser": "^1.4.4",
+    "atom-select-list": "^0.7.0",
+    "escape-carriage": "^1.2.0",
+    "escape-string-regexp": "^1.0.5",
+    "jmp": "^1.0.0",
+    "kernelspecs": "^2.0.0",
+    "lodash": "^4.14.0",
+    "mobx": "^4.1.1",
+    "mobx-react": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-rangeslider": "^2.1.0",
+    "spawnteract": "^4.0.0",
+    "tildify": "^1.2.0",
+    "uuid": "^3.2.1",
+    "ws": "^3.3.1",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "provide"
+      }
+    },
+    "hydrogen.provider": {
+      "versions": {
+        "1.1.0": "provideHydrogen",
+        "1.2.0": "provideHydrogen"
+      }
+    }
+  },
+  "devDependencies": {
+    "atom-jasmine3-test-runner": "^3.0.1",
+    "enzyme": "^3.1.1",
+    "enzyme-adapter-react-16": "^1.0.4",
+    "flow-bin": "^0.67.1",
+    "husky": "^0.14.0",
+    "lint-staged": "^7.0.0",
+    "markdox": "^0.1.10",
+    "mobx-react-devtools": "^5.0.0",
+    "prettier": "^1.8.2",
+    "react-test-renderer": "^16.0.0"
+  }
+}

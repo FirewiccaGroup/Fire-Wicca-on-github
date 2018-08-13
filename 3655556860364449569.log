@@ -1,0 +1,294 @@
+﻿2018-06-09 20:19:36> Program: Starting Squirrel Updater: --install .
+2018-06-09 20:19:36> Program: Starting install, writing to C:\Users\YASHU\AppData\Local\SquirrelTemp
+2018-06-09 20:19:36> Program: About to install to: C:\Users\YASHU\AppData\Local\atom
+2018-06-09 20:19:38> CheckForUpdateImpl: Couldn't write out staging user ID, this user probably shouldn't get beta anything: System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\YASHU\AppData\Local\atom\packages\.betaId'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   at System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+   at System.IO.File.WriteAllText(String path, String contents, Encoding encoding)
+   at Squirrel.UpdateManager.CheckForUpdateImpl.getOrCreateStagedUserId()
+2018-06-09 20:19:38> CheckForUpdateImpl: Failed to load local releases, starting from scratch: System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\YASHU\AppData\Local\atom\packages\RELEASES'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   at Squirrel.Utility.LoadLocalReleases(String localReleaseFile)
+   at Squirrel.UpdateManager.CheckForUpdateImpl.<CheckForUpdate>d__2.MoveNext()
+2018-06-09 20:19:38> CheckForUpdateImpl: Reading RELEASES file from C:\Users\YASHU\AppData\Local\SquirrelTemp
+2018-06-09 20:19:40> CheckForUpdateImpl: First run or local directory is corrupt, starting from scratch
+2018-06-09 20:19:43> ApplyReleasesImpl: Writing files to app directory: C:\Users\YASHU\AppData\Local\atom\app-1.27.2
+2018-06-09 20:19:50> LogHost: Rigging execution stub for atom_ExecutionStub.exe to C:\Users\YASHU\AppData\Local\atom\atom.exe
+2018-06-09 20:21:35> ApplyReleasesImpl: Squirrel Enabled Apps: [C:\Users\YASHU\AppData\Local\atom\app-1.27.2\atom.exe]
+2018-06-09 20:21:53> ApplyReleasesImpl: Couldn't run Squirrel hook, continuing: C:\Users\YASHU\AppData\Local\atom\app-1.27.2\atom.exe: System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at Squirrel.Utility.<>c__DisplayClass11_0.<InvokeProcessAsync>b__0()
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.Utility.<InvokeProcessAsync>d__11.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<>c__DisplayClass10_0.<<invokePostInstall>b__0>d.MoveNext()
+2018-06-09 20:21:54> ApplyReleasesImpl: Starting fixPinnedExecutables
+2018-06-09 20:21:54> ApplyReleasesImpl: Examining Pin: File Explorer.lnk
+2018-06-09 20:21:54> ApplyReleasesImpl: Examining Pin: Google Chrome.lnk
+2018-06-09 20:21:54> ApplyReleasesImpl: Examining Pin: Visual Studio Code.lnk
+2018-06-09 20:21:54> ApplyReleasesImpl: Fixing up tray icons
+2018-06-09 20:21:55> ApplyReleasesImpl: cleanDeadVersions: for version 1.27.2
+2018-06-09 20:21:55> ApplyReleasesImpl: cleanDeadVersions: exclude folder app-1.27.2
+3924> 2018-06-29 09:45:14> Program: Starting Squirrel Updater: --install .
+3924> 2018-06-29 09:45:15> Program: Starting install, writing to C:\Users\YASHU\AppData\Local\SquirrelTemp
+3924> 2018-06-29 09:45:15> Program: About to install to: C:\Users\YASHU\AppData\Local\Discord
+3924> 2018-06-29 09:45:16> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+3924> 2018-06-29 09:45:16> CheckForUpdateImpl: Reading RELEASES file from C:\Users\YASHU\AppData\Local\SquirrelTemp
+3924> 2018-06-29 09:45:16> CheckForUpdateImpl: Remote version 0.0.301 differs from local 
+3924> 2018-06-29 09:45:16> CheckForUpdateImpl: First run or local directory is corrupt, starting from scratch
+3924> 2018-06-29 09:45:17> ApplyReleasesImpl: Writing files to app directory: C:\Users\YASHU\AppData\Local\Discord\app-0.0.301
+3924> 2018-06-29 09:45:33> IEnableLogger: Failed to install package to app dir: System.AggregateException: One or more errors occurred. ---> System.IO.IOException: Access to the path 'resources' is denied.
+   at System.IO.DirectoryInfo.MoveTo(String destDirName)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<>c__DisplayClass7_1.<installPackageToAppDir>b__5(DirectoryInfo subdir)
+   at Squirrel.Utility.<>c__DisplayClass15_1`1.<ForEachAsync>b__1()
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.Utility.<>c__DisplayClass16_0`1.<<ForEachAsync>b__1>d.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<>c__DisplayClass7_2.<installPackageToAppDir>b__4(DirectoryInfo ld)
+   at Squirrel.EnumerableExtensions.ForEach[TSource](IEnumerable`1 source, Action`1 onNext)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<>c__DisplayClass7_0.<<installPackageToAppDir>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.Utility.<LogIfThrows>d__38`1.MoveNext()
+---> (Inner Exception #0) System.IO.IOException: Access to the path 'resources' is denied.
+   at System.IO.DirectoryInfo.MoveTo(String destDirName)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<>c__DisplayClass7_1.<installPackageToAppDir>b__5(DirectoryInfo subdir)
+   at Squirrel.Utility.<>c__DisplayClass15_1`1.<ForEachAsync>b__1()
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.Utility.<>c__DisplayClass16_0`1.<<ForEachAsync>b__1>d.MoveNext()<---
+
+3924> 2018-06-29 09:45:33> Unhandled exception: System.AggregateException: One or more errors occurred. ---> System.AggregateException: One or more errors occurred. ---> System.IO.IOException: Access to the path 'resources' is denied.
+   at System.IO.DirectoryInfo.MoveTo(String destDirName)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<>c__DisplayClass7_1.<installPackageToAppDir>b__5(DirectoryInfo subdir)
+   at Squirrel.Utility.<>c__DisplayClass15_1`1.<ForEachAsync>b__1()
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.Utility.<>c__DisplayClass16_0`1.<<ForEachAsync>b__1>d.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<>c__DisplayClass7_2.<installPackageToAppDir>b__4(DirectoryInfo ld)
+   at Squirrel.EnumerableExtensions.ForEach[TSource](IEnumerable`1 source, Action`1 onNext)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<>c__DisplayClass7_0.<<installPackageToAppDir>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.Utility.<LogIfThrows>d__38`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<ApplyReleases>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.UpdateManager.<FullInstall>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Squirrel.Update.Program.<Install>d__5.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at Squirrel.Update.Program.executeCommandLine(String[] args)
+   at Squirrel.Update.Program.main(String[] args)
+---> (Inner Exception #0) System.AggregateException: One or more errors occurred. ---> System.IO.IOException: Access to the path 'resources' is denied.
+   at System.IO.DirectoryInfo.MoveTo(String destDirName)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<>c__DisplayClass7_1.<installPackageToAppDir>b__5(DirectoryInfo subdir)
+   at Squirrel.Utility.<>c__DisplayClass15_1`1.<ForEachAsync>b__1()
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.Utility.<>c__DisplayClass16_0`1.<<ForEachAsync>b__1>d.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<>c__DisplayClass7_2.<installPackageToAppDir>b__4(DirectoryInfo ld)
+   at Squirrel.EnumerableExtensions.ForEach[TSource](IEnumerable`1 source, Action`1 onNext)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<>c__DisplayClass7_0.<<installPackageToAppDir>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.Utility.<LogIfThrows>d__38`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<ApplyReleases>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.UpdateManager.<FullInstall>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Squirrel.Update.Program.<Install>d__5.MoveNext()
+---> (Inner Exception #0) System.IO.IOException: Access to the path 'resources' is denied.
+   at System.IO.DirectoryInfo.MoveTo(String destDirName)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<>c__DisplayClass7_1.<installPackageToAppDir>b__5(DirectoryInfo subdir)
+   at Squirrel.Utility.<>c__DisplayClass15_1`1.<ForEachAsync>b__1()
+   at System.Threading.Tasks.Task.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Squirrel.Utility.<>c__DisplayClass16_0`1.<<ForEachAsync>b__1>d.MoveNext()<---
+<---
+
+10224> 2018-06-29 10:06:03> Program: Starting Squirrel Updater: --install .
+10224> 2018-06-29 10:06:03> Program: Starting install, writing to C:\Users\YASHU\AppData\Local\SquirrelTemp
+10224> 2018-06-29 10:06:05> Program: About to install to: C:\Users\YASHU\AppData\Local\Discord
+10224> 2018-06-29 10:06:05> Program: Install path C:\Users\YASHU\AppData\Local\Discord already exists, burning it to the ground
+10224> 2018-06-29 10:06:06> SingleGlobalInstance: Grabbing lockfile with timeout of 00:00:10
+10224> 2018-06-29 10:06:06> CheckForUpdateImpl: Reading RELEASES file from C:\Users\YASHU\AppData\Local\SquirrelTemp
+10224> 2018-06-29 10:06:06> CheckForUpdateImpl: Remote version 0.0.301 differs from local 
+10224> 2018-06-29 10:06:06> CheckForUpdateImpl: First run or local directory is corrupt, starting from scratch
+10224> 2018-06-29 10:06:07> ApplyReleasesImpl: Writing files to app directory: C:\Users\YASHU\AppData\Local\Discord\app-0.0.301
+10224> 2018-06-29 10:06:15> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-console-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-console-l1-1-0.dll
+10224> 2018-06-29 10:06:15> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-datetime-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-datetime-l1-1-0.dll
+10224> 2018-06-29 10:06:15> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-debug-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-debug-l1-1-0.dll
+10224> 2018-06-29 10:06:15> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-errorhandling-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-errorhandling-l1-1-0.dll
+10224> 2018-06-29 10:06:15> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-file-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-file-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-file-l1-2-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-file-l1-2-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-file-l2-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-file-l2-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-handle-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-handle-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-heap-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-heap-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-interlocked-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-interlocked-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-localization-l1-2-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-localization-l1-2-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-namedpipe-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-namedpipe-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-libraryloader-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-libraryloader-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-memory-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-memory-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-processenvironment-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-processenvironment-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-profile-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-profile-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-processthreads-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-processthreads-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-rtlsupport-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-rtlsupport-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-synch-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-synch-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-sysinfo-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-sysinfo-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-processthreads-l1-1-1.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-processthreads-l1-1-1.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-synch-l1-2-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-synch-l1-2-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-string-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-string-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-timezone-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-timezone-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-crt-conio-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-crt-conio-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-crt-environment-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-crt-environment-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-crt-filesystem-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-crt-filesystem-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-core-util-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-core-util-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-crt-locale-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-crt-locale-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-crt-heap-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-crt-heap-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-crt-convert-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-crt-convert-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-crt-multibyte-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-crt-multibyte-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-crt-math-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-crt-math-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-crt-stdio-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-crt-stdio-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\app.ico to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\app.ico
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-crt-private-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-crt-private-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-crt-string-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-crt-string-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\d3dcompiler_47.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\d3dcompiler_47.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\blink_image_resources_200_percent.pak to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\blink_image_resources_200_percent.pak
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\Discord.exe to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\Discord.exe
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-crt-process-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-crt-process-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-crt-time-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-crt-time-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\content_resources_200_percent.pak to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\content_resources_200_percent.pak
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-crt-utility-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-crt-utility-l1-1-0.dll
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\content_shell.pak to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\content_shell.pak
+10224> 2018-06-29 10:06:16> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\api-ms-win-crt-runtime-l1-1-0.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\api-ms-win-crt-runtime-l1-1-0.dll
+10224> 2018-06-29 10:06:17> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\ffmpeg.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\ffmpeg.dll
+10224> 2018-06-29 10:06:17> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\libEGL.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\libEGL.dll
+10224> 2018-06-29 10:06:17> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\node.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\node.dll
+10224> 2018-06-29 10:06:17> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\pdf_viewer_resources.pak to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\pdf_viewer_resources.pak
+10224> 2018-06-29 10:06:17> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\libGLESv2.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\libGLESv2.dll
+10224> 2018-06-29 10:06:17> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\icudtl.dat to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\icudtl.dat
+10224> 2018-06-29 10:06:17> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\ucrtbase.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\ucrtbase.dll
+10224> 2018-06-29 10:06:17> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\snapshot_blob.bin to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\snapshot_blob.bin
+10224> 2018-06-29 10:06:17> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\msvcp140.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\msvcp140.dll
+10224> 2018-06-29 10:06:17> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\ui_resources_200_percent.pak to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\ui_resources_200_percent.pak
+10224> 2018-06-29 10:06:17> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\Squirrel.exe to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\Squirrel.exe
+10224> 2018-06-29 10:06:17> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\natives_blob.bin to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\natives_blob.bin
+10224> 2018-06-29 10:06:17> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\vcruntime140.dll to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\vcruntime140.dll
+10224> 2018-06-29 10:06:17> ApplyReleasesImpl: Moving file C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\lib\net45\views_resources_200_percent.pak to C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\views_resources_200_percent.pak
+10224> 2018-06-29 10:06:24> ApplyReleasesImpl: Started updateSelf pid 7816
+10224> 2018-06-29 10:06:26> ApplyReleasesImpl: Squirrel Enabled Apps: [C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\Discord.exe]
+10224> 2018-06-29 10:06:27> Utility: Process Started: C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\Discord.exe --squirrel-install 0.0.301, pid 5116
+10224> 2018-06-29 10:06:44> Utility: Received exitcode 0 from process C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\Discord.exe
+10224> 2018-06-29 10:06:44> ApplyReleasesImpl: ran C:\Users\YASHU\AppData\Local\Discord\app-0.0.301\Discord.exe, pid 7424
+10224> 2018-06-29 10:06:44> ApplyReleasesImpl: Starting fixPinnedExecutables
+10224> 2018-06-29 10:06:44> ApplyReleasesImpl: fixPinnedExecutables: newCurrentFolder: app-0.0.301
+10224> 2018-06-29 10:06:44> ApplyReleasesImpl: File 'C:\Users\YASHU\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\OneDrive.lnk' could not be converted into a valid ShellLink: System.IO.FileNotFoundException: The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+   at Squirrel.Shell.ShellLink.IShellLinkW.Resolve(IntPtr hWnd, UInt32 fFlags)
+   at Squirrel.Shell.ShellLink.Open(String linkFile, IntPtr hWnd, EShellLinkResolveFlags resolveFlags, UInt16 timeOut)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<fixPinnedExecutables>b__11_0(FileInfo file)
+10224> 2018-06-29 10:06:44> ApplyReleasesImpl: File 'C:\Users\YASHU\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessibility\Narrator.lnk' could not be converted into a valid ShellLink: System.IO.FileNotFoundException: The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+   at Squirrel.Shell.ShellLink.IShellLinkW.Resolve(IntPtr hWnd, UInt32 fFlags)
+   at Squirrel.Shell.ShellLink.Open(String linkFile, IntPtr hWnd, EShellLinkResolveFlags resolveFlags, UInt16 timeOut)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<fixPinnedExecutables>b__11_0(FileInfo file)
+10224> 2018-06-29 10:06:44> ApplyReleasesImpl: File 'C:\Users\YASHU\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessibility\On-Screen Keyboard.lnk' could not be converted into a valid ShellLink: System.IO.FileNotFoundException: The system cannot find the file specified. (Exception from HRESULT: 0x80070002)
+   at Squirrel.Shell.ShellLink.IShellLinkW.Resolve(IntPtr hWnd, UInt32 fFlags)
+   at Squirrel.Shell.ShellLink.Open(String linkFile, IntPtr hWnd, EShellLinkResolveFlags resolveFlags, UInt16 timeOut)
+   at Squirrel.UpdateManager.ApplyReleasesImpl.<fixPinnedExecutables>b__11_0(FileInfo file)
+10224> 2018-06-29 10:06:45> ApplyReleasesImpl: Updating shortcut C:\Users\YASHU\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Discord Inc\Discord.lnk
+10224> 2018-06-29 10:06:45> ApplyReleasesImpl: Updating shortcut C:\Users\YASHU\Desktop\Discord.lnk
+10224> 2018-06-29 10:06:45> ApplyReleasesImpl: Fixing up tray icons
+10224> 2018-06-29 10:06:45> ApplyReleasesImpl: cleanDeadVersions: for version 0.0.301
+10224> 2018-06-29 10:06:45> ApplyReleasesImpl: cleanDeadVersions: exclude current version folder app-0.0.301
+2018-07-09 14:58:33> Program: Starting Squirrel Updater: --install .
+2018-07-09 14:58:34> Program: Starting install, writing to C:\Users\YASHU\AppData\Local\SquirrelTemp
+2018-07-09 14:58:35> Program: About to install to: C:\Users\YASHU\AppData\Local\atom
+2018-07-09 14:58:35> Program: Install path C:\Users\YASHU\AppData\Local\atom already exists, burning it to the ground
+2018-07-09 14:58:36> IEnableLogger: Failed to copy Update.exe to C:\Users\YASHU\AppData\Local\atom\Update.exe: System.UnauthorizedAccessException: Access to the path 'C:\Users\YASHU\AppData\Local\atom\Update.exe' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   at Squirrel.Update.Program.<>c__DisplayClass4_1.<Install>b__4()
+   at Squirrel.Utility.LogIfThrows(IFullLogger This, LogLevel level, String message, Action block)
+2018-07-09 14:58:37> Unhandled exception: System.AggregateException: One or more errors occurred. ---> System.UnauthorizedAccessException: Access to the path 'C:\Users\YASHU\AppData\Local\atom\Update.exe' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   at Squirrel.Update.Program.<>c__DisplayClass4_1.<Install>b__4()
+   at Squirrel.Utility.LogIfThrows(IFullLogger This, LogLevel level, String message, Action block)
+   at Squirrel.Utility.ErrorIfThrows(IEnableLogger This, Action block, String message)
+   at Squirrel.Update.Program.<Install>d__4.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at Squirrel.Update.Program.executeCommandLine(String[] args)
+   at Squirrel.Update.Program.main(String[] args)
+---> (Inner Exception #0) System.UnauthorizedAccessException: Access to the path 'C:\Users\YASHU\AppData\Local\atom\Update.exe' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   at Squirrel.Update.Program.<>c__DisplayClass4_1.<Install>b__4()
+   at Squirrel.Utility.LogIfThrows(IFullLogger This, LogLevel level, String message, Action block)
+   at Squirrel.Utility.ErrorIfThrows(IEnableLogger This, Action block, String message)
+   at Squirrel.Update.Program.<Install>d__4.MoveNext()<---
+
