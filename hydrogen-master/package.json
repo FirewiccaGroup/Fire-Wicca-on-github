@@ -51,12 +51,12 @@
     ]
   },
   "dependencies": {
-    "@jupyterlab/services": "^0.52.0",
-    "@nteract/commutable": "^3.0.4",
-    "@nteract/display-area": "^3.1.7",
+    "@jupyterlab/services": "^3.1.4",
+    "@nteract/commutable": "^4.1.1",
+    "@nteract/display-area": "^4.4.3",
     "@nteract/transform-plotly": "^3.1.4",
     "@nteract/transform-vega": "^3.1.1",
-    "@nteract/transforms": "^3.1.4",
+    "@nteract/transforms": "^4.4.2",
     "anser": "^1.4.4",
     "atom-select-list": "^0.7.0",
     "escape-carriage": "^1.2.0",
@@ -64,15 +64,15 @@
     "jmp": "^1.0.0",
     "kernelspecs": "^2.0.0",
     "lodash": "^4.14.0",
-    "mobx": "^4.1.1",
+    "mobx": "^5.1.0",
     "mobx-react": "^5.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-rangeslider": "^2.1.0",
-    "spawnteract": "^4.0.0",
+    "spawnteract": "^5.1.0",
     "tildify": "^1.2.0",
     "uuid": "^3.2.1",
-    "ws": "^3.3.1",
+    "ws": "^6.0.0",
     "xmlhttprequest": "^1.8.0"
   },
   "consumedServices": {
@@ -96,14 +96,14 @@
     }
   },
   "devDependencies": {
-    "atom-jasmine3-test-runner": "^3.0.1",
+    "atom-jasmine3-test-runner": "^4.0.0",
     "enzyme": "^3.1.1",
     "enzyme-adapter-react-16": "^1.0.4",
-    "flow-bin": "^0.67.1",
+    "flow-bin": "^0.80.0",
     "husky": "^0.14.0",
     "lint-staged": "^7.0.0",
     "markdox": "^0.1.10",
-    "mobx-react-devtools": "^5.0.0",
+    "mobx-react-devtools": "^6.0.3",
     "prettier": "^1.8.2",
     "react-test-renderer": "^16.0.0"
   }
